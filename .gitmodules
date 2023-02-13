@@ -1,0 +1,3 @@
+[submodule "submodules/jenkins-util"]
+	path = submodules/jenkins-util
+	url = ../jenkins-util.git
