@@ -1,5 +1,5 @@
 > [!WARNING]
-> This library is a fork of [ngx-treeview](https://github.com/leovo2708/ngx-treeview) that is compatible with Angular 16. This fork does not have the intention to continue the support of this library and comes with no guarantees. Please use at your own discretion.
+> This library is a fork of [ngx-treeview](https://github.com/leovo2708/ngx-treeview) that is compatible with Angular 16 and 17. This fork does not have the intention to continue the support of this library and comes with no guarantees. Please use at your own discretion.
 
 
 # ngx-treeview
