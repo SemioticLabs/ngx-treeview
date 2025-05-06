@@ -1,6 +1,6 @@
 {
   "name": "@samotics/angular-ngx-treeview",
-  "version": "17.0.4",
+  "version": "17.0.5",
   "license": "MIT",
   "description": "An Angular treeview component with checkbox",
   "scripts": {
