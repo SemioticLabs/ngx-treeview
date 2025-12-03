@@ -8,7 +8,8 @@ import { expect, createGenericTestComponent } from '../../testing';
 
 @Component({
   selector: 'ngx-test',
-  template: ''
+  template: '',
+  standalone: false
 })
 class TestComponent { }
 

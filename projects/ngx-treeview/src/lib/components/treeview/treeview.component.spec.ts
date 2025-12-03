@@ -24,7 +24,8 @@ const fakeData: FakeData = {
 
 @Component({
   selector: 'ngx-test',
-  template: ''
+  template: '',
+  standalone: false
 })
 class TestComponent {
   config = fakeData.config;
@@ -152,7 +153,9 @@ describe('TreeviewComponent', () => {
 
     it('should show icon on header with collapsed state', () => {
       const collapseExpandIcon = queryCollapseExpandIcon(fixture.debugElement);
-      expect(collapseExpandIcon.nativeElement).toHaveCssClass('fa-expand');
+      const svg = collapseExpandIcon.nativeElement.querySelector('svg');
+      expect(svg).not.toBeNull();
+      expect(svg.classList.contains('bi-arrows-angle-expand')).toBeTruthy();
     });
   });
 
@@ -584,7 +587,9 @@ describe('TreeviewComponent', () => {
       });
 
       it('should have element class "fa-compress"', () => {
-        expect(collapseExpandIcon.nativeElement).toHaveCssClass('fa-compress');
+        const svg = collapseExpandIcon.nativeElement.querySelector('svg');
+        expect(svg).not.toBeNull();
+        expect(svg.classList.contains('bi-arrows-angle-contract')).toBeTruthy();
       });
 
       it('should display "Item1" & "Item2"', () => {
@@ -600,7 +605,9 @@ describe('TreeviewComponent', () => {
         }));
 
         it('should have element class "fa-expand"', () => {
-          expect(collapseExpandIcon.nativeElement).toHaveCssClass('fa-expand');
+          const svg = collapseExpandIcon.nativeElement.querySelector('svg');
+          expect(svg).not.toBeNull();
+          expect(svg.classList.contains('bi-arrows-angle-expand')).toBeTruthy();
         });
 
         it('should display "Item1" & "Item2"', () => {

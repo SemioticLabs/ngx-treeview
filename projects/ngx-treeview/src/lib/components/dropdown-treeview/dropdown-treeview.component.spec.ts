@@ -27,7 +27,8 @@ const fakeData: FakeData = {
 
 @Component({
   selector: 'ngx-test',
-  template: ''
+  template: '',
+  standalone: false
 })
 class TestComponent {
   config = fakeData.config;
@@ -71,6 +72,8 @@ describe('DropdownTreeviewComponent', () => {
     const fixture = createTestComponent(template);
     fixture.detectChanges();
     tick();
+    // Additional detectChanges to ensure computed signals are re-evaluated after child components initialize
+    fixture.detectChanges();
     button = fixture.debugElement.query(By.css('button'));
   }));
 

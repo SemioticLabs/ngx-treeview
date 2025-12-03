@@ -25,6 +25,7 @@ const testTemplate = fakeItemTemplate
 @Component({
   selector: 'ngx-test',
   template: '',
+  standalone: false
 })
 class TestComponent {
   item = fakeData.item;
