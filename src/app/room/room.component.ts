@@ -7,7 +7,8 @@ import { RoomService } from './room.service';
   templateUrl: './room.component.html',
   providers: [
     RoomService
-  ]
+  ],
+  standalone: false
 })
 export class RoomComponent implements OnInit {
   rooms: TreeviewItem[];

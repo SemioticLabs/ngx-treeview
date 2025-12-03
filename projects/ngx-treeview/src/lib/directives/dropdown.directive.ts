@@ -3,7 +3,8 @@ import { isNil } from 'lodash';
 
 @Directive({
   selector: '[ngxDropdown]',
-  exportAs: 'ngxDropdown'
+  exportAs: 'ngxDropdown',
+  standalone: false
 })
 export class DropdownDirective {
   toggleElement: any;

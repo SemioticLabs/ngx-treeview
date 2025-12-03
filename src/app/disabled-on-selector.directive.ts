@@ -1,7 +1,8 @@
 import { Directive, Input, OnChanges, ElementRef, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[ngxDisabledOnSelector]'
+  selector: '[ngxDisabledOnSelector]',
+  standalone: false
 })
 export class DisabledOnSelectorDirective implements OnChanges {
   @Input() ngxDisabledOnSelector: string;

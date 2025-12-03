@@ -7,7 +7,8 @@ import { BookService } from './book.service';
   templateUrl: './book.component.html',
   providers: [
     BookService
-  ]
+  ],
+  standalone: false
 })
 export class BookComponent implements OnInit {
   dropdownEnabled = true;

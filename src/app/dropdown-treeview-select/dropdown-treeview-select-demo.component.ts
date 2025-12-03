@@ -7,7 +7,8 @@ import { BookService } from '../book/book.service';
   templateUrl: './dropdown-treeview-select-demo.component.html',
   providers: [
     BookService
-  ]
+  ],
+  standalone: false
 })
 export class DropdownTreeviewSelectDemoComponent implements OnInit {
   value = 11;

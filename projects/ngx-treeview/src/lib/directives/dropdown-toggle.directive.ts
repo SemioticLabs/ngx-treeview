@@ -8,7 +8,8 @@ import { DropdownDirective } from './dropdown.directive';
     'aria-haspopup': 'true',
     '[attr.aria-expanded]': 'dropdown.isOpen',
     '(click)': 'dropdown.toggle()'
-  }
+  },
+  standalone: false
 })
 export class DropdownToggleDirective {
   constructor(
