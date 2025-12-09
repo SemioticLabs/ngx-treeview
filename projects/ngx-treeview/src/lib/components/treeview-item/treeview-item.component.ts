@@ -7,7 +7,8 @@ import { TreeviewItemTemplateContext } from '../../models/treeview-item-template
 @Component({
   selector: 'ngx-treeview-item',
   templateUrl: './treeview-item.component.html',
-  styleUrls: ['./treeview-item.component.scss']
+  styleUrls: ['./treeview-item.component.scss'],
+  standalone: false
 })
 export class TreeviewItemComponent {
   @Input() config: TreeviewConfig;

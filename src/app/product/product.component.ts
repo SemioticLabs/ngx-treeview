@@ -22,7 +22,8 @@ export class ProductTreeviewConfig extends TreeviewConfig {
     ProductService,
     { provide: TreeviewEventParser, useClass: OrderDownlineTreeviewEventParser },
     { provide: TreeviewConfig, useClass: ProductTreeviewConfig }
-  ]
+  ],
+  standalone: false
 })
 export class ProductComponent implements OnInit {
   @ViewChild(TreeviewComponent, { static: false }) treeviewComponent: TreeviewComponent;

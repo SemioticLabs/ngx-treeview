@@ -18,7 +18,8 @@ const fakeData: FakeData = {
 
 @Component({
   selector: 'ngx-test',
-  template: ''
+  template: '',
+  standalone: false
 })
 class TestComponent {
   open = fakeData.open;

@@ -6,7 +6,8 @@ import { DropdownDirective } from './dropdown.directive';
   host: {
     '[class.dropdown-menu]': 'true',
     '[class.show]': 'dropdown.isOpen'
-  }
+  },
+  standalone: false
 })
 export class DropdownMenuDirective {
   constructor(

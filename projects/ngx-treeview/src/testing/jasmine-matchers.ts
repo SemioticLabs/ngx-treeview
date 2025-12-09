@@ -9,7 +9,6 @@
 
 
 import { ɵglobal as global } from '@angular/core';
-import { ɵgetDOM as getDOM } from '@angular/platform-browser';
 
 
 
@@ -119,26 +118,12 @@ export const expect: (actual: any) => NgMatchers = <any>_global.expect;
 _global.beforeEach(function () {
     jasmine.addMatchers({
         // Custom handler for Map as Jasmine does not support it yet
-        toEqual: function (util) {
+        toEqual: function () {
             return {
                 compare: function (actual: any, expected: any) {
-                    return { pass: util.equals(actual, expected, [compareMap]) };
+                    return { pass: actual === expected || (JSON.stringify(actual) === JSON.stringify(expected)) };
                 }
             };
-
-            function compareMap(actual: any, expected: any): boolean {
-                if (actual instanceof Map) {
-                    let pass = actual.size === expected.size;
-                    if (pass) {
-                        actual.forEach((v: any, k: any) => { pass = pass && util.equals(v, expected.get(k)); });
-                    }
-                    return pass;
-                } else {
-                    // TODO(misko): we should change the return, but jasmine.d.ts is not null safe
-                    // tslint:disable-next-line:no-non-null-assertion
-                    return undefined!;
-                }
-            }
         },
 
         toBePromise: function () {
@@ -193,8 +178,9 @@ _global.beforeEach(function () {
 
             function buildError(isNot: boolean) {
                 return function (actual: any, className: string) {
+                    const hasClass = actual.classList ? actual.classList.contains(className) : false;
                     return {
-                        pass: getDOM().hasClass(actual, className) === !isNot,
+                        pass: hasClass === !isNot,
                         get message() {
                             return `Expected ${actual.outerHTML} ${isNot ? 'not ' : ''}to contain the CSS class "${className}"`;
                         }
@@ -208,11 +194,13 @@ _global.beforeEach(function () {
                 compare: function (actual: any, styles: { [k: string]: string } | string) {
                     let allPassed: boolean;
                     if (typeof styles === 'string') {
-                        allPassed = getDOM().hasStyle(actual, styles);
+                        const style = actual.style;
+                        allPassed = style && style[styles] !== '';
                     } else {
                         allPassed = Object.keys(styles).length !== 0;
                         Object.keys(styles).forEach(prop => {
-                            allPassed = allPassed && getDOM().hasStyle(actual, prop, styles[prop]);
+                            const style = actual.style;
+                            allPassed = allPassed && style && style[prop] === styles[prop];
                         });
                     }
 
@@ -306,30 +294,28 @@ _global.beforeEach(function () {
 
 function elementText(n: any): string {
     const hasNodes = (node: any) => {
-        const children = getDOM().childNodes(node);
-        return children && children.length > 0;
+        return node.childNodes && node.childNodes.length > 0;
     };
 
     if (n instanceof Array) {
         return n.map(elementText).join('');
     }
 
-    if (getDOM().isCommentNode(n)) {
+    if (n.nodeType === Node.COMMENT_NODE) {
         return '';
     }
 
-    if (getDOM().isElementNode(n) && getDOM().tagName(n) === 'CONTENT') {
-        return elementText(Array.prototype.slice.apply(getDOM().getDistributedNodes(n)));
+    if (n.nodeType === Node.ELEMENT_NODE && n.tagName === 'CONTENT') {
+        return elementText(Array.prototype.slice.call(n.getDistributedNodes ? n.getDistributedNodes() : []));
     }
 
-    if (getDOM().hasShadowRoot(n)) {
-        return elementText(getDOM().childNodesAsList(getDOM().getShadowRoot(n)));
+    if (n.shadowRoot) {
+        return elementText(Array.prototype.slice.call(n.shadowRoot.childNodes));
     }
 
     if (hasNodes(n)) {
-        return elementText(getDOM().childNodesAsList(n));
+        return elementText(Array.prototype.slice.call(n.childNodes));
     }
 
-    // tslint:disable-next-line:no-non-null-assertion
-    return getDOM().getText(n)!;
+    return n.textContent || '';
 }

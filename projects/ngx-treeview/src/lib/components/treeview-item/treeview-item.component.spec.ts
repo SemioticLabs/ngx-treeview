@@ -7,7 +7,7 @@ import { expect, createGenericTestComponent } from '../../../testing';
 import { TreeviewConfig } from '../../models/treeview-config';
 import { TreeviewItemComponent } from '../treeview-item/treeview-item.component';
 import { TreeviewItem } from '../../models/treeview-item';
-import { fakeItemTemplate } from './treeview-item-template.spec';
+import { fakeItemTemplate } from '../../testings/treeview-item-template.spec';
 
 interface FakeData {
   item: TreeviewItem;
@@ -25,6 +25,7 @@ const testTemplate = fakeItemTemplate
 @Component({
   selector: 'ngx-test',
   template: '',
+  standalone: false
 })
 class TestComponent {
   item = fakeData.item;

@@ -11,7 +11,8 @@ import { DropdownTreeviewSelectI18n } from './dropdown-treeview-select-i18n';
   ],
   providers: [
     { provide: TreeviewI18n, useClass: DropdownTreeviewSelectI18n }
-  ]
+  ],
+  standalone: false
 })
 export class DropdownTreeviewSelectComponent implements OnChanges {
   @Input() config: TreeviewConfig;

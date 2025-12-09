@@ -9,7 +9,8 @@ import { DefaultTreeviewI18n } from './default-treeview-i18n';
   styleUrls: ['./app.component.scss'],
   providers: [
     { provide: TreeviewI18n, useClass: DefaultTreeviewI18n }
-  ]
+  ],
+  standalone: false
 })
 export class AppComponent {
   constructor(
