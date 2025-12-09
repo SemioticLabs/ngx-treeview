@@ -1,3 +1,21 @@
+# [19.0.0](https://www.npmjs.com/package/@samotics/ngx-treeview) (2025-12-09)
+
+### Enhancement:
+
+- Upgrade to Angular 19
+- Updated all dependencies to latest compatible versions
+- Fixed test compatibility issues with Angular 19
+- Updated TypeScript to 5.6.2
+- Updated zone.js to 0.15.0
+
+### Breaking Changes:
+
+- Requires Angular 19.x
+- Requires minimum TypeScript 5.6.2
+- Package name: `@samotics/ngx-treeview`
+
+---
+
 <a name="0.0.3"></a>
 
 # [0.0.3](https://www.npmjs.com/package/ngx-treeview) (2017-04-20)

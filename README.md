@@ -1,16 +1,23 @@
 > [!WARNING]
-> This library is a fork of [ngx-treeview](https://github.com/leovo2708/ngx-treeview) that is compatible with Angular 16 and 17. This fork does not have the intention to continue the support of this library and comes with no guarantees. Please use at your own discretion.
+> This library is a fork of [ngx-treeview](https://github.com/leovo2708/ngx-treeview) that is compatible with Angular 16, 17, 18, and 19. This fork does not have the intention to continue the support of this library and comes with no guarantees. Please use at your own discretion.
 
 
 # ngx-treeview
 
 An Angular treeview component with checkbox
 
+## Latest Updates
+
+**Version 19.0.0** - Angular 19 Compatibility
+- Upgraded to Angular 19
+- Updated dependencies and peer dependencies
+- All tests passing with Angular 19
+
 ## Dependencies
 
-- [Angular](https://angular.io)
-- [Lodash](https://lodash.com)
-- [Bootstrap 4](https://getbootstrap.com)
+- [Angular](https://angular.io) ^19.0.0
+- [Lodash](https://lodash.com) ^4.17.21
+- [Bootstrap 4](https://getbootstrap.com) (for styling)
 
 This component is currently supporting Bootstrap 4. If you are using Bootstrap 4 alpha 6, please downgrade to the older version 1.0.10.
 
@@ -31,16 +38,22 @@ You can customize CSS yourself to break down dependencies to Bootstrap.
 
 ## Installation
 
-After install the above dependencies, install `ngx-treeview` via:
+After install the above dependencies, install `@samotics/ngx-treeview` via:
 
 ```shell
-npm install ngx-treeview --save
+npm install @samotics/ngx-treeview --save
 ```
+
+**Version Compatibility:**
+- Angular 19: Use `@samotics/ngx-treeview@19.x`
+- Angular 18: Use `@samotics/ngx-treeview@18.x`
+- Angular 17: Use `@samotics/ngx-treeview@17.x`
+- Angular 16: Use `@samotics/ngx-treeview@16.x`
 
 Once installed you need to import our main module in your application module:
 
 ```js
-import { TreeviewModule } from 'ngx-treeview';
+import { TreeviewModule } from '@samotics/ngx-treeview';
 
 @NgModule({
   declarations: [AppComponent, ...],
