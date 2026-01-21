@@ -1,6 +1,6 @@
 {
   "name": "@samotics/ngx-treeview",
-  "version": "19.0.1",
+  "version": "20.0.0",
   "license": "MIT",
   "description": "An Angular treeview component with checkbox",
   "keywords": [
@@ -25,8 +25,8 @@
     "url": "https://github.com/semioticlabs/ngx-treeview/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^19.0.0",
-    "@angular/core": "^19.0.0",
+    "@angular/common": "^20.0.0",
+    "@angular/core": "^20.0.0",
     "lodash": "^4.17.21"
   },
   "dependencies": {
