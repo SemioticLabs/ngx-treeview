@@ -8,6 +8,11 @@ An Angular treeview component with checkbox
 
 ## Latest Updates
 
+**Version 19.1.0** - Dependency Updates
+- Updated Angular dependencies to ^19.2.18
+- Updated dev dependencies to latest compatible versions
+- All tests passing with Angular 19.2.18
+
 **Version 19.0.0** - Angular 19 Compatibility
 - Upgraded to Angular 19
 - Updated dependencies and peer dependencies
@@ -15,7 +20,7 @@ An Angular treeview component with checkbox
 
 ## Dependencies
 
-- [Angular](https://angular.io) ^19.0.0
+- [Angular](https://angular.io) ^19.2.18
 - [Lodash](https://lodash.com) ^4.17.21
 - [Bootstrap 4](https://getbootstrap.com) (for styling)
 

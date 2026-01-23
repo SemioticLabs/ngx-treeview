@@ -1,3 +1,13 @@
+# [19.1.0](https://www.npmjs.com/package/@samotics/ngx-treeview) (2026-01-23)
+
+### Enhancement:
+
+- Updated Angular dependencies from ^19.0.0 to ^19.2.18
+- Updated Angular dev dependencies to ^19.2.18
+- Updated ng-packagr to ^19.2.2
+- Updated documentation to reflect Angular 19.2.18 dependency requirements
+
+---
 # [19.0.1](https://www.npmjs.com/package/@samotics/ngx-treeview) (2025-12-09)
 
 ### Enhancement:
