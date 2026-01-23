@@ -25,8 +25,8 @@
     "url": "https://github.com/semioticlabs/ngx-treeview/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^19.0.0",
-    "@angular/core": "^19.0.0",
+    "@angular/common": "^19.2.18",
+    "@angular/core": "^19.2.18",
     "lodash": "^4.17.21"
   },
   "dependencies": {
