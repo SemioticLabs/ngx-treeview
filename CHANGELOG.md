@@ -1,3 +1,20 @@
+# [20.0.0](https://www.npmjs.com/package/@samotics/ngx-treeview) (2026-01-21)
+
+### Enhancement:
+
+- Upgrade to Angular 20
+- Updated Angular dependencies to ^20.3.14
+- Updated Angular dev dependencies to ^20.3.14
+- Updated ng-packagr to ^20.3.2
+- Updated TypeScript to ~5.8.0
+- Updated peer dependencies to require Angular ^20.0.0
+
+### Breaking Changes:
+
+- Requires Angular 20.x
+
+---
+
 # [19.1.0](https://www.npmjs.com/package/@samotics/ngx-treeview) (2026-01-23)
 
 ### Enhancement:
@@ -8,6 +25,7 @@
 - Updated documentation to reflect Angular 19.2.18 dependency requirements
 
 ---
+
 # [19.0.1](https://www.npmjs.com/package/@samotics/ngx-treeview) (2025-12-09)
 
 ### Enhancement:

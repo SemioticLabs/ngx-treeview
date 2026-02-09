@@ -1,6 +1,5 @@
 > [!WARNING]
-> This library is a fork of [ngx-treeview](https://github.com/leovo2708/ngx-treeview) that is compatible with Angular 16, 17, 18, and 19. This fork does not have the intention to continue the support of this library and comes with no guarantees. Please use at your own discretion.
-
+> This library is a fork of [ngx-treeview](https://github.com/leovo2708/ngx-treeview) that is compatible with Angular 16, 17, 18, 19, and 20. This fork does not have the intention to continue the support of this library and comes with no guarantees. Please use at your own discretion.
 
 # ngx-treeview
 
@@ -8,19 +7,27 @@ An Angular treeview component with checkbox
 
 ## Latest Updates
 
+**Version 20.0.0** - Angular 20 Compatibility
+
+- Upgraded to Angular 20
+- Updated dependencies and peer dependencies
+- All tests passing with Angular 20
+
 **Version 19.1.0** - Dependency Updates
+
 - Updated Angular dependencies to ^19.2.18
 - Updated dev dependencies to latest compatible versions
 - All tests passing with Angular 19.2.18
 
 **Version 19.0.0** - Angular 19 Compatibility
+
 - Upgraded to Angular 19
 - Updated dependencies and peer dependencies
 - All tests passing with Angular 19
 
 ## Dependencies
 
-- [Angular](https://angular.io) ^19.2.18
+- [Angular](https://angular.io) ^20.0.0
 - [Lodash](https://lodash.com) ^4.17.21
 - [Bootstrap 4](https://getbootstrap.com) (for styling)
 
@@ -50,6 +57,8 @@ npm install @samotics/ngx-treeview --save
 ```
 
 **Version Compatibility:**
+
+- Angular 20: Use `@samotics/ngx-treeview@20.x`
 - Angular 19: Use `@samotics/ngx-treeview@19.x`
 - Angular 18: Use `@samotics/ngx-treeview@18.x`
 - Angular 17: Use `@samotics/ngx-treeview@17.x`
@@ -74,26 +83,13 @@ export class AppModule {
 #### Treeview:
 
 ```html
-<ngx-treeview
-  [config]="config"
-  [items]="items"
-  (selectedChange)="onSelectedChange($event)"
-  (filterChange)="onFilterChange($event)"
->
-</ngx-treeview>
+<ngx-treeview [config]="config" [items]="items" (selectedChange)="onSelectedChange($event)" (filterChange)="onFilterChange($event)"> </ngx-treeview>
 ```
 
 #### Treeview with dropdown:
 
 ```html
-<ngx-dropdown-treeview
-  [buttonClass]="buttonClass"
-  [config]="config"
-  [items]="items"
-  (selectedChange)="onSelectedChange($event)"
-  (filterChange)="onFilterChange($event)"
->
-</ngx-dropdown-treeview>
+<ngx-dropdown-treeview [buttonClass]="buttonClass" [config]="config" [items]="items" (selectedChange)="onSelectedChange($event)" (filterChange)="onFilterChange($event)"> </ngx-dropdown-treeview>
 ```
 
 `config` is optional. This is the default configuration:
@@ -115,12 +111,7 @@ You can change default configuration easily because TreeviewConfig is injectable
 To map your JSON objects to TreeItem objects.
 
 ```html
-<ngx-dropdown-treeview
-  [config]="config"
-  [items]="items | ngxTreeview:'textField'"
-  (selectedChange)="onSelectedChange($event)"
->
-</ngx-dropdown-treeview>
+<ngx-dropdown-treeview [config]="config" [items]="items | ngxTreeview:'textField'" (selectedChange)="onSelectedChange($event)"> </ngx-dropdown-treeview>
 ```
 
 #### Create a TreeviewItem:
@@ -177,9 +168,7 @@ const vegetableCategory = new TreeviewItem({
     { text: "Potato", value: 22 },
   ],
 });
-vegetableCategory.children.push(
-  new TreeviewItem({ text: "Mushroom", value: 23, checked: false })
-);
+vegetableCategory.children.push(new TreeviewItem({ text: "Mushroom", value: 23, checked: false }));
 vegetableCategory.correctChecked(); // need this to make 'Vegetable' node to change checked value from true to false
 ```
 
