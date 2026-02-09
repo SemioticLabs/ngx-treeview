@@ -13,6 +13,16 @@ An Angular treeview component with checkbox
 - Updated dependencies and peer dependencies
 - All tests passing with Angular 20
 
+**Version 19.1.0** - Dependency Updates
+- Updated Angular dependencies to ^19.2.18
+- Updated dev dependencies to latest compatible versions
+- All tests passing with Angular 19.2.18
+
+**Version 19.0.0** - Angular 19 Compatibility
+- Upgraded to Angular 19
+- Updated dependencies and peer dependencies
+- All tests passing with Angular 19
+
 ## Dependencies
 
 - [Angular](https://angular.io) ^20.0.0
