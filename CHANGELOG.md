@@ -1,3 +1,12 @@
+# [20.1.0](https://www.npmjs.com/package/@samotics/ngx-treeview) (2026-03-10)
+
+### Security:
+
+- Addressed dependency vulnerabilities via `npm audit fix`
+- Updated dependencies to resolve reported security issues
+
+---
+
 # [20.0.0](https://www.npmjs.com/package/@samotics/ngx-treeview) (2026-01-21)
 
 ### Enhancement:
