@@ -7,6 +7,11 @@ An Angular treeview component with checkbox
 
 ## Latest Updates
 
+**Version 20.1.0** - Security & dependency updates
+
+- Addressed dependency vulnerabilities via `npm audit fix`
+- Updated dependencies to resolve reported security issues
+
 **Version 20.0.0** - Angular 20 Compatibility
 
 - Upgraded to Angular 20
