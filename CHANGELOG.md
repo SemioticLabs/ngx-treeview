@@ -1,3 +1,18 @@
+# [20.1.1](https://www.npmjs.com/package/@samotics/ngx-treeview) (2026-03-26)
+
+### Security:
+
+- Upgraded Node.js requirement from v18 to v20 (required by Angular 20.3.18+)
+- Fixed Angular XSS vulnerability in i18n attribute bindings (GHSA-g93w-mfhg-p222) by upgrading Angular packages from 20.3.16 to 20.3.18
+- Upgraded `@angular-devkit/build-angular` and related tooling from 20.3.14 to 20.3.21
+- Fixed `flatted` prototype pollution / DoS vulnerabilities (GHSA-25h7-pfq9-p65f, GHSA-rf6f-7fwh-wjgh)
+- Fixed `socket.io-parser` unbounded binary attachments vulnerability (GHSA-677m-j7p3-52f9)
+- Upgraded `rollup` from 4.52.3 to 4.59.0, `webpack` from 5.101.2 to 5.105.0, `serialize-javascript` from 6.0.2 to 7.0.5, `copy-webpack-plugin` from 13.0.1 to 14.0.0
+- Reduced total npm audit vulnerabilities from 25 to 9 (remaining 9 are low/moderate `picomatch` issues in build tooling with no upstream fix yet available)
+- All 138 tests passing
+
+---
+
 # [20.1.0](https://www.npmjs.com/package/@samotics/ngx-treeview) (2026-03-10)
 
 ### Security:
