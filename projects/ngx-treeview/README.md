@@ -8,6 +8,20 @@ An Angular treeview component with checkbox
 
 ## Latest Updates
 
+**Version 20.1.1** - Security & dependency updates
+
+- Upgraded Node.js requirement to v20 (required by Angular 20.3.18+)
+- Fixed Angular XSS vulnerability in i18n attribute bindings (GHSA-g93w-mfhg-p222)
+- Upgraded Angular packages from 20.3.16 → 20.3.18 and build tooling from 20.3.14 → 20.3.21
+- Fixed `flatted` and `socket.io-parser` CVEs
+- Reduced npm audit vulnerabilities from 25 to 9
+- All 138 tests passing
+
+**Version 20.1.0** - Security & dependency updates
+
+- Addressed dependency vulnerabilities via `npm audit fix`
+- Updated dependencies to resolve reported security issues
+
 **Version 20.0.0** - Angular 20 Compatibility
 - Upgraded to Angular 20
 - Updated dependencies and peer dependencies
