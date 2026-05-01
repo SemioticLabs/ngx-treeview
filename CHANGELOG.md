@@ -1,3 +1,18 @@
+# [20.1.2](https://www.npmjs.com/package/@samotics/ngx-treeview) (2026-04-28)
+
+### Security:
+
+- Upgraded Angular packages from 20.3.18 → 20.3.19 and build tooling from 20.3.21 → 20.3.24
+- Fixed `picomatch` ReDoS / method injection vulnerabilities (GHSA-3v7f-55p6-f55p, GHSA-c2c7-rcm5-vvqj) by pinning `picomatch` to `>=4.0.4`
+- Fixed `lodash` vulnerability by upgrading from 4.17.21 to 4.18.1
+- Fixed `hono` vulnerability by pinning to `>=4.12.12` (resolved: 4.12.15)
+- Fixed `@hono/node-server` vulnerability by pinning to `>=1.19.13` (resolved: 1.19.14)
+- Fixed `node-forge` vulnerability by pinning to `>=1.4.0`
+- Fixed `follow-redirects` vulnerability by pinning to `>=1.16.0`
+- All 138 tests passing
+
+---
+
 # [20.1.1](https://www.npmjs.com/package/@samotics/ngx-treeview) (2026-03-26)
 
 ### Security:

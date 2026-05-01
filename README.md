@@ -7,6 +7,14 @@ An Angular treeview component with checkbox
 
 ## Latest Updates
 
+**Version 20.1.2** - Security & dependency updates
+
+- Upgraded Angular packages from 20.3.18 → 20.3.19 and build tooling from 20.3.21 → 20.3.24
+- Fixed `picomatch` ReDoS / method injection vulnerabilities (GHSA-3v7f-55p6-f55p, GHSA-c2c7-rcm5-vvqj)
+- Fixed `lodash` vulnerability by upgrading from 4.17.21 to 4.18.1
+- Fixed `hono`, `@hono/node-server`, `node-forge`, and `follow-redirects` CVEs via dependency overrides
+- All 138 tests passing
+
 **Version 20.1.1** - Security & dependency updates
 
 - Upgraded Node.js requirement to v20 (required by Angular 20.3.18+)
