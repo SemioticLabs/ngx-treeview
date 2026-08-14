@@ -1,3 +1,37 @@
+> **Unmaintained:** This library is no longer maintained. If you want a dependencyless treeview, you can base yours on the example below.
+
+## Dependencyless treeview (Angular 20)
+
+```ts
+import { Component, input } from '@angular/core';
+
+export interface TreeNode {
+  label: string;
+  children?: TreeNode[];
+}
+
+@Component({
+  selector: 'app-tree',
+  template: `
+    <ul>
+      @for (node of nodes(); track node.label) {
+        <li>
+          {{ node.label }}
+          @if (node.children?.length) {
+            <app-tree [nodes]="node.children!" />
+          }
+        </li>
+      }
+    </ul>
+  `,
+})
+export class TreeComponent {
+  nodes = input.required<TreeNode[]>();
+}
+```
+
+---
+
 # [20.1.2](https://www.npmjs.com/package/@samotics/ngx-treeview) (2026-04-28)
 
 ### Security:
