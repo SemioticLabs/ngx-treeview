@@ -1,9 +1,41 @@
 > [!WARNING]
+> **Unmaintained:** This library is no longer maintained. If you want a dependencyless treeview, you can base yours on the example below.
+>
 > This library is a fork of [ngx-treeview](https://github.com/leovo2708/ngx-treeview) that is compatible with Angular 16, 17, 18, 19, and 20. This fork does not have the intention to continue the support of this library and comes with no guarantees. Please use at your own discretion.
 
 # ngx-treeview
 
 An Angular treeview component with checkbox
+
+## Dependencyless treeview (Angular 20)
+
+```ts
+import { Component, input } from '@angular/core';
+
+export interface TreeNode {
+  label: string;
+  children?: TreeNode[];
+}
+
+@Component({
+  selector: 'app-tree',
+  template: `
+    <ul>
+      @for (node of nodes(); track node.label) {
+        <li>
+          {{ node.label }}
+          @if (node.children?.length) {
+            <app-tree [nodes]="node.children!" />
+          }
+        </li>
+      }
+    </ul>
+  `,
+})
+export class TreeComponent {
+  nodes = input.required<TreeNode[]>();
+}
+```
 
 ## Latest Updates
 
